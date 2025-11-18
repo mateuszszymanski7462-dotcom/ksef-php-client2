@@ -13,6 +13,7 @@ use N1ebieski\KSEFClient\DTOs\HttpClient\Request;
 use N1ebieski\KSEFClient\Exceptions\HttpClient\AsyncClientNotSupportedException;
 use N1ebieski\KSEFClient\ValueObjects\AccessToken;
 use N1ebieski\KSEFClient\ValueObjects\EncryptionKey;
+use N1ebieski\KSEFClient\ValueObjects\RefreshToken;
 use N1ebieski\KSEFClient\ValueObjects\Requests\Sessions\EncryptedKey;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface as BaseResponseInterface;
@@ -63,6 +64,15 @@ final class HttpClient implements HttpClientInterface
         );
     }
 
+    public function withRefreshToken(RefreshToken $refreshToken): self
+    {
+        return new self(
+            client: $this->client,
+            config: $this->config->withRefreshToken($refreshToken),
+            logger: $this->logger
+        );
+    }
+
     private function createClientRequest(Request $request): RequestInterface
     {
         $psr17Factory = new Psr17Factory();
@@ -71,6 +81,11 @@ final class HttpClient implements HttpClientInterface
 
         if ($this->config->accessToken instanceof AccessToken) {
             $request = $request->withHeader('Authorization', "Bearer {$this->config->accessToken->token}");
+        }
+
+        // W przypadku requestu refresh, header Bearer powininen byc refresh tokenem
+        if ($request->useRefreshToken && $this->config->refreshToken instanceof RefreshToken) {
+            $request = $request->withHeader('Authorization', "Bearer {$this->config->refreshToken->token}");
         }
 
         $clientRequest = $psr17Factory->createRequest(

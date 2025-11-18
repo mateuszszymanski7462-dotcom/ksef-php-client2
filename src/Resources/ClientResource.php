@@ -101,6 +101,7 @@ final class ClientResource extends AbstractResource implements ClientResourceInt
             $refreshToken = RefreshToken::from($refreshToken, $validUntil);
         }
 
+        $this->client = $this->client->withRefreshToken($refreshToken);
         $this->config = $this->config->withRefreshToken($refreshToken);
 
         return $this;

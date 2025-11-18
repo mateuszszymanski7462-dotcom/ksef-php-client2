@@ -22,7 +22,8 @@ final class RefreshHandler extends AbstractHandler
     {
         return $this->client->sendRequest(new Request(
             method: Method::Post,
-            uri: Uri::from('auth/token/refresh')
+            uri: Uri::from('auth/token/refresh'),
+            useRefreshToken: true
         ));
     }
 }

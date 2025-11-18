@@ -8,6 +8,7 @@ use N1ebieski\KSEFClient\Contracts\HttpClient\ResponseInterface;
 use N1ebieski\KSEFClient\DTOs\HttpClient\Request;
 use N1ebieski\KSEFClient\ValueObjects\AccessToken;
 use N1ebieski\KSEFClient\ValueObjects\EncryptionKey;
+use N1ebieski\KSEFClient\ValueObjects\RefreshToken;
 use N1ebieski\KSEFClient\ValueObjects\Requests\Sessions\EncryptedKey;
 
 interface HttpClientInterface
@@ -21,6 +22,8 @@ interface HttpClientInterface
     public function sendAsyncRequest(array $requests): array;
 
     public function withAccessToken(AccessToken $accessToken): self;
+
+    public function withRefreshToken(RefreshToken $accessToken): self;
 
     public function withoutAccessToken(): self;
 

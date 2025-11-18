@@ -26,12 +26,13 @@ final class Request extends AbstractDTO
         ],
         public readonly array $parameters = [],
         public readonly array | string | null $body = null,
+        public readonly bool $useRefreshToken = false,
     ) {
     }
 
     public function withUri(Uri $uri): self
     {
-        return new self($this->method, $uri, $this->headers, $this->parameters, $this->body);
+        return new self($this->method, $uri, $this->headers, $this->parameters, $this->body, $this->useRefreshToken);
     }
 
     public function withHeader(string $name, string $value): self
