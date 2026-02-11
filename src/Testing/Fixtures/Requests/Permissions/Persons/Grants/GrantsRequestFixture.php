@@ -22,5 +22,11 @@ final class GrantsRequestFixture extends AbstractRequestFixture
             'CredentialsRead',
         ],
         'description' => 'Opis uprawnienia',
+        'subjectDetails' => [
+            'personById' => [
+                'firstName' => 'Adam',
+                'lastName' => 'Kowalski',
+            ],
+         ],
     ];
 }

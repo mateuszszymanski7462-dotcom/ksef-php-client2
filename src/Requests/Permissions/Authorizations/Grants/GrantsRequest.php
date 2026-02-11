@@ -9,7 +9,6 @@ use N1ebieski\KSEFClient\DTOs\Requests\Permissions\Authorizations\SubjectDetails
 use N1ebieski\KSEFClient\DTOs\Requests\Permissions\SubjectIdentifierNipGroup;
 use N1ebieski\KSEFClient\DTOs\Requests\Permissions\SubjectIdentifierPeppolIdGroup;
 use N1ebieski\KSEFClient\Requests\AbstractRequest;
-use N1ebieski\KSEFClient\Support\Optional;
 use N1ebieski\KSEFClient\ValueObjects\Requests\Description;
 use N1ebieski\KSEFClient\ValueObjects\Requests\Permissions\Authorizations\AuthorizationPermissionType;
 

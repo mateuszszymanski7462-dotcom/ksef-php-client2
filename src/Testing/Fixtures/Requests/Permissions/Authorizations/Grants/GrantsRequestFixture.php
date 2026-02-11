@@ -17,5 +17,8 @@ final class GrantsRequestFixture extends AbstractRequestFixture
         ],
         'permission' => 'SelfInvoicing',
         'description' => 'działanie w imieniu 3393244202 w kontekście 7762811692, Firma sp. z o.o.',
+        'subjectDetails' => [
+            'fullName' => 'Firma sp. z o.o.',
+        ]
     ];
 }

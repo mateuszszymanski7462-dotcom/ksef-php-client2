@@ -20,5 +20,14 @@ final class GrantsRequestFixture extends AbstractRequestFixture
             'InvoiceWrite',
         ],
         'description' => 'Opis uprawnienia',
+        'subjectDetails' => [
+            'personByFpWithId' => [
+                'firstName' => 'Adam',
+                'lastName' => 'Kowalski',
+                'identifier' => [
+                    'nip' => '1234567890',
+                ]
+            ],
+         ],
     ];
 }

@@ -22,5 +22,18 @@ final class GrantsRequestFixture extends AbstractRequestFixture
         'euEntityName' => [
             'euSubjectName' => 'Firma G.m.b.H.'
         ],
+        'subjectDetails' => [
+            'personByFpWithId' => [
+                'firstName' => 'Adam',
+                'lastName' => 'Kowalski',
+                'identifier' => [
+                    'nip' => '1234567890',
+                ]
+            ]
+        ],
+        'euEntityDetails' => [
+            'fullName' => 'Firma G.m.b.H.',
+            'address' => 'Warszawa ul. Świętokrzyska 4824 00-916 Warszawa'
+        ]
     ];
 }

@@ -35,6 +35,7 @@ final class GrantsRequest extends AbstractRequest implements BodyInterface
         return [
             ...$data,
             'euEntityName' => (string) $this->euEntityName,
+            'euEntityDetails' => $this->euEntityDetails->toBody(),
             'subjectIdentifier' => [
                 'type' => $this->subjectIdentifierGroup->getIdentifier()->getType(),
                 'value' => (string) $this->subjectIdentifierGroup->getIdentifier(),

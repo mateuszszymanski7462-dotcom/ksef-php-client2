@@ -26,5 +26,8 @@ final class GrantsRequestFixture extends AbstractRequestFixture
             ],
         ],
         'description' => 'Opis uprawnienia',
+        'subjectDetails' => [
+            'fullName' => 'Adam Kowalski',
+        ],
     ];
 }
