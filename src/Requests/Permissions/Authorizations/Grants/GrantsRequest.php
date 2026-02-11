@@ -19,7 +19,7 @@ final class GrantsRequest extends AbstractRequest implements BodyInterface
         public readonly SubjectIdentifierNipGroup | SubjectIdentifierPeppolIdGroup $subjectIdentifierGroup,
         public readonly AuthorizationPermissionType $permission,
         public readonly Description $description,
-        public readonly Optional | SubjectDetails $subjectDetails = new Optional(),
+        public readonly SubjectDetails $subjectDetails,
     ) {
     }
 

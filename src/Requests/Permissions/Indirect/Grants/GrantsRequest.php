@@ -33,8 +33,8 @@ final class GrantsRequest extends AbstractRequest implements BodyInterface
         public readonly SubjectIdentifierNipGroup | SubjectIdentifierPeselGroup | SubjectIdentifierFingerprintGroup $subjectIdentifierGroup,
         public readonly array $permissions,
         public readonly Description $description,
+        public readonly PersonByIdentifierGroup | PersonByFingerprintWithIdentifierGroup | PersonByFingerprintWithoutIdentifierGroup $subjectDetails,
         public readonly Optional | TargetIdentifierNipGroup | TargetIdentifierInternalIdGroup | TargetIdentifierTypeGroup $targetIdentifierGroup = new Optional(),
-        public readonly Optional | PersonByIdentifierGroup | PersonByFingerprintWithIdentifierGroup | PersonByFingerprintWithoutIdentifierGroup $subjectDetails = new Optional(),
     ) {
     }
 

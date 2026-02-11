@@ -22,7 +22,7 @@ final class GrantsRequest extends AbstractRequest implements BodyInterface
         public readonly SubjectIdentifierFingerprintGroup $subjectIdentifierGroup,
         public readonly array $permissions,
         public readonly Description $description,
-        public readonly Optional | PersonByFingerprintWithoutIdentifierGroup | EntityByFingerprintGroup $subjectDetails = new Optional(),
+        public readonly PersonByFingerprintWithoutIdentifierGroup | EntityByFingerprintGroup $subjectDetails,
     ) {
     }
 

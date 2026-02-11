@@ -7,10 +7,11 @@ namespace N1ebieski\KSEFClient\Requests\Permissions\EuEntities\Administration\Gr
 use N1ebieski\KSEFClient\Contracts\BodyInterface;
 use N1ebieski\KSEFClient\DTOs\Requests\Permissions\ContextIdentifierNipVatUeGroup;
 use N1ebieski\KSEFClient\DTOs\Requests\Permissions\EntityByFingerprintGroup;
+use N1ebieski\KSEFClient\DTOs\Requests\Permissions\EuEntities\Administration\EuEntityDetails;
+use N1ebieski\KSEFClient\DTOs\Requests\Permissions\PersonByFingerprintWithIdentifierGroup;
 use N1ebieski\KSEFClient\DTOs\Requests\Permissions\PersonByFingerprintWithoutIdentifierGroup;
 use N1ebieski\KSEFClient\DTOs\Requests\Permissions\SubjectIdentifierFingerprintGroup;
 use N1ebieski\KSEFClient\Requests\AbstractRequest;
-use N1ebieski\KSEFClient\Support\Optional;
 use N1ebieski\KSEFClient\ValueObjects\Requests\Description;
 use N1ebieski\KSEFClient\ValueObjects\Requests\Permissions\EuEntities\Administration\EuEntityName;
 
@@ -21,7 +22,8 @@ final class GrantsRequest extends AbstractRequest implements BodyInterface
         public readonly ContextIdentifierNipVatUeGroup $contextIdentifierGroup,
         public readonly Description $description,
         public readonly EuEntityName $euEntityName,
-        public readonly Optional | PersonByFingerprintWithoutIdentifierGroup | EntityByFingerprintGroup $subjectDetails = new Optional(),
+        public readonly PersonByFingerprintWithIdentifierGroup | PersonByFingerprintWithoutIdentifierGroup | EntityByFingerprintGroup $subjectDetails,
+        public readonly EuEntityDetails $euEntityDetails
     ) {
     }
 
