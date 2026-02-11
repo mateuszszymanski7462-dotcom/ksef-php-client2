@@ -9,7 +9,6 @@ use N1ebieski\KSEFClient\DTOs\Requests\Permissions\Entities\EntityPermission;
 use N1ebieski\KSEFClient\DTOs\Requests\Permissions\Entities\SubjectDetails;
 use N1ebieski\KSEFClient\DTOs\Requests\Permissions\SubjectIdentifierNipGroup;
 use N1ebieski\KSEFClient\Requests\AbstractRequest;
-use N1ebieski\KSEFClient\Support\Optional;
 use N1ebieski\KSEFClient\ValueObjects\Requests\Description;
 
 final class GrantsRequest extends AbstractRequest implements BodyInterface
@@ -21,7 +20,7 @@ final class GrantsRequest extends AbstractRequest implements BodyInterface
         public readonly SubjectIdentifierNipGroup $subjectIdentifierGroup,
         public readonly array $permissions,
         public readonly Description $description,
-        public readonly Optional | SubjectDetails $subjectDetails = new Optional(),
+        public readonly SubjectDetails $subjectDetails,
     ) {
     }
 

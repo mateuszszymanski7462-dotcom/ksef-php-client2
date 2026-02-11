@@ -9,6 +9,7 @@ use N1ebieski\KSEFClient\Validator\Rules\Array\MaxRule as ArrayMaxRule;
 use N1ebieski\KSEFClient\Validator\Rules\Array\MinRule as ArrayMinRule;
 use N1ebieski\KSEFClient\Validator\Rules\Date\AfterRule;
 use N1ebieski\KSEFClient\Validator\Rules\Date\BeforeRule;
+use N1ebieski\KSEFClient\Validator\Rules\Date\MaxRangeRule;
 use N1ebieski\KSEFClient\Validator\Rules\Date\TimezoneRule;
 use N1ebieski\KSEFClient\Validator\Rules\Directory\ExistsRule as DirectoryExistsRule;
 use N1ebieski\KSEFClient\Validator\Rules\File\ExistsRule as FileExistsRule;
@@ -53,6 +54,11 @@ dataset('rules', [
         'beforeRule',
         new DateTimeImmutable('+2 days'),
         [new BeforeRule(new DateTimeImmutable('+1 day'))]
+    ],
+    'maxRangeRule' => [
+        'maxRangeRule',
+        new DateTimeImmutable('2024-01-01 00:00:00'),
+        [new MaxRangeRule(new DateTimeImmutable('2024-03-02 00:00:00'), 2)]
     ],
     'timezoneRule' => [
         'timezoneRule',
