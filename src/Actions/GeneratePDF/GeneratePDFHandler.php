@@ -84,13 +84,21 @@ final class GeneratePDFHandler extends AbstractHandler
                 throw new RuntimeException("Node.js process exited with code {$returnVar}:\n{$stderr}");
             }
 
-            $pdfs[$key] = file_get_contents($pdfFile);
+            $content = file_get_contents($pdfFile);
+
+            if ($content === false) {
+                throw new RuntimeException(
+                    sprintf('Unable to read PDF file "%s" for document "%s".', $pdfFile, $key)
+                );
+            }
+
+            $pdfs[$key] = $content;
 
             unlink($xmlFile);
             unlink($pdfFile);
         }
 
-        /** @var array<string, string> $pdfs */
+        /** @var array<string, non-empty-string> $pdfs */
         return new KsefPDFs(...$pdfs);
     }
 }
