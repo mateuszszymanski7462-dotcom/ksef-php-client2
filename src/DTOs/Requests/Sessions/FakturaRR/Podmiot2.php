@@ -6,15 +6,15 @@ namespace N1ebieski\KSEFClient\DTOs\Requests\Sessions\FakturaRR;
 
 use DOMDocument;
 use N1ebieski\KSEFClient\Contracts\DomSerializableInterface;
-use N1ebieski\KSEFClient\DTOs\Requests\Sessions\Adres;
-use N1ebieski\KSEFClient\DTOs\Requests\Sessions\AdresKoresp;
-use N1ebieski\KSEFClient\DTOs\Requests\Sessions\DaneKontaktowe;
-use N1ebieski\KSEFClient\DTOs\Requests\Sessions\Podmiot1DaneIdentyfikacyjne;
+use N1ebieski\KSEFClient\DTOs\Requests\Sessions\FakturaRR\Adres;
+use N1ebieski\KSEFClient\DTOs\Requests\Sessions\FakturaRR\AdresKoresp;
+use N1ebieski\KSEFClient\DTOs\Requests\Sessions\FakturaRR\DaneKontaktowe;
+use N1ebieski\KSEFClient\DTOs\Requests\Sessions\FakturaRR\Podmiot1DaneIdentyfikacyjne;
 use N1ebieski\KSEFClient\Support\AbstractDTO;
 use N1ebieski\KSEFClient\Support\Optional;
 use N1ebieski\KSEFClient\Validator\Rules\Array\MaxRule;
 use N1ebieski\KSEFClient\Validator\Validator;
-use N1ebieski\KSEFClient\ValueObjects\Requests\Sessions\StatusInfoPodatnika;
+use N1ebieski\KSEFClient\ValueObjects\Requests\Sessions\FakturaRR\StatusInfoPodatnika;
 use N1ebieski\KSEFClient\ValueObjects\Requests\XmlNamespace;
 
 final class Podmiot2 extends AbstractDTO implements DomSerializableInterface

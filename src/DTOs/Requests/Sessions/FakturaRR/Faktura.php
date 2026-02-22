@@ -7,7 +7,7 @@ namespace N1ebieski\KSEFClient\DTOs\Requests\Sessions\FakturaRR;
 use DOMDocument;
 use N1ebieski\KSEFClient\Contracts\DomSerializableInterface;
 use N1ebieski\KSEFClient\Contracts\XmlSerializableInterface;
-use N1ebieski\KSEFClient\DTOs\Requests\Sessions\Stopka;
+use N1ebieski\KSEFClient\DTOs\Requests\Sessions\FakturaRR\Stopka;
 use N1ebieski\KSEFClient\Support\AbstractDTO;
 use N1ebieski\KSEFClient\Support\Concerns\HasToXml;
 use N1ebieski\KSEFClient\Support\Optional;

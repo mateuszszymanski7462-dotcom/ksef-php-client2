@@ -5,20 +5,17 @@ declare(strict_types=1);
 namespace N1ebieski\KSEFClient\DTOs\Requests\Sessions\FakturaRR;
 
 use DOMDocument;
+use N1ebieski\KSEFClient\ValueObjects\Requests\XmlNamespace;
 use DOMElement;
 use N1ebieski\KSEFClient\Contracts\DomSerializableInterface;
-use N1ebieski\KSEFClient\DTOs\Requests\Sessions\FakturaRR\BrakIDGroup;
-use N1ebieski\KSEFClient\DTOs\Requests\Sessions\FakturaRR\IDWewGroup;
-use N1ebieski\KSEFClient\DTOs\Requests\Sessions\FakturaRR\NIPGroup;
+use N1ebieski\KSEFClient\ValueObjects\Requests\Sessions\FakturaRR\Nazwa;
 use N1ebieski\KSEFClient\Support\AbstractDTO;
 use N1ebieski\KSEFClient\Support\Optional;
-use N1ebieski\KSEFClient\ValueObjects\Requests\Sessions\Nazwa;
-use N1ebieski\KSEFClient\ValueObjects\Requests\XmlNamespace;
 
-final class Podmiot3DaneIdentyfikacyjne extends AbstractDTO implements DomSerializableInterface
+final class Podmiot2KDaneIdentyfikacyjne extends AbstractDTO implements DomSerializableInterface
 {
     public function __construct(
-        public readonly NIPGroup | IDWewGroup | BrakIDGroup $idGroup,
+        public readonly NIPGroup | UEGroup | KrajGroup | BrakIDGroup $idGroup,
         public readonly Optional | Nazwa $nazwa = new Optional()
     ) {
     }

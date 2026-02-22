@@ -5,15 +5,14 @@ declare(strict_types=1);
 namespace N1ebieski\KSEFClient\DTOs\Requests\Sessions\FakturaRR;
 
 use DOMDocument;
-use N1ebieski\KSEFClient\ValueObjects\Requests\XmlNamespace;
 use DOMElement;
 use N1ebieski\KSEFClient\Contracts\DomSerializableInterface;
-use N1ebieski\KSEFClient\DTOs\Requests\Sessions\NrRBGroup;
-use N1ebieski\KSEFClient\ValueObjects\Requests\Sessions\NazwaBanku;
-use N1ebieski\KSEFClient\ValueObjects\Requests\Sessions\OpisRachunku;
-use N1ebieski\KSEFClient\ValueObjects\Requests\Sessions\RachunekWlasnyBanku;
+use N1ebieski\KSEFClient\DTOs\Requests\Sessions\FakturaRR\NrRBGroup;
 use N1ebieski\KSEFClient\Support\AbstractDTO;
 use N1ebieski\KSEFClient\Support\Optional;
+use N1ebieski\KSEFClient\ValueObjects\Requests\Sessions\NazwaBanku;
+use N1ebieski\KSEFClient\ValueObjects\Requests\Sessions\OpisRachunku;
+use N1ebieski\KSEFClient\ValueObjects\Requests\XmlNamespace;
 
 final class RachunekBankowy extends AbstractDTO implements DomSerializableInterface
 {

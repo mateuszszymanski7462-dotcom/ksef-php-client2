@@ -5,14 +5,12 @@ declare(strict_types=1);
 namespace N1ebieski\KSEFClient\DTOs\Requests\Sessions\FakturaRR;
 
 use DOMDocument;
-use N1ebieski\KSEFClient\ValueObjects\Requests\XmlNamespace;
 use N1ebieski\KSEFClient\Contracts\DomSerializableInterface;
-use N1ebieski\KSEFClient\DTOs\Requests\Sessions\Adres;
-use N1ebieski\KSEFClient\DTOs\Requests\Sessions\Podmiot1KDaneIdentyfikacyjne;
-use N1ebieski\KSEFClient\DTOs\Requests\Sessions\Podmiot2KDaneIdentyfikacyjne;
-use N1ebieski\KSEFClient\ValueObjects\Requests\Sessions\IDNabywcy;
+use N1ebieski\KSEFClient\DTOs\Requests\Sessions\FakturaRR\Adres;
+use N1ebieski\KSEFClient\DTOs\Requests\Sessions\FakturaRR\Podmiot1KDaneIdentyfikacyjne;
 use N1ebieski\KSEFClient\Support\AbstractDTO;
 use N1ebieski\KSEFClient\Support\Optional;
+use N1ebieski\KSEFClient\ValueObjects\Requests\XmlNamespace;
 
 final class Podmiot2K extends AbstractDTO implements DomSerializableInterface
 {

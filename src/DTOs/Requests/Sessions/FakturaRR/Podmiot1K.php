@@ -7,8 +7,8 @@ namespace N1ebieski\KSEFClient\DTOs\Requests\Sessions\FakturaRR;
 use DOMDocument;
 use N1ebieski\KSEFClient\ValueObjects\Requests\XmlNamespace;
 use N1ebieski\KSEFClient\Contracts\DomSerializableInterface;
-use N1ebieski\KSEFClient\DTOs\Requests\Sessions\Adres;
-use N1ebieski\KSEFClient\DTOs\Requests\Sessions\Podmiot1KDaneIdentyfikacyjne;
+use N1ebieski\KSEFClient\DTOs\Requests\Sessions\FakturaRR\Adres;
+use N1ebieski\KSEFClient\DTOs\Requests\Sessions\FakturaRR\Podmiot1KDaneIdentyfikacyjne;
 use N1ebieski\KSEFClient\Support\AbstractDTO;
 
 final class Podmiot1K extends AbstractDTO implements DomSerializableInterface
